@@ -36,3 +36,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+*.log
+MiniJamGold/Logs/AssetImportWorker0.log
+*.log

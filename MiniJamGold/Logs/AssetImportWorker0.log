@@ -324,3 +324,137 @@ Received Import Request.
   path: Assets/Models/Rails/RailJump.fbx
   artifactKey: Guid(6dbb9a50336c1eb4b88237af1a3f952e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Models/Rails/RailJump.fbx using Guid(6dbb9a50336c1eb4b88237af1a3f952e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49c86d08a70a0bc8c6571ef8123fb933') in 0.036411 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005626 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\5. Programming\4. Unity\0. Game-Jam-Dragon-Game\MiniJam85Gold\MiniJamGold\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\5. Programming\4. Unity\0. Game-Jam-Dragon-Game\MiniJam85Gold\MiniJamGold\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for Lumin target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.340 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1341ms)
+		BeginReloadAssembly (205ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (16ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (100ms)
+		EndReloadAssembly (1053ms)
+			LoadAssemblies (104ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (422ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (351ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (63ms)
+				ProcessInitializeOnLoadAttributes (267ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2940 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 115.0 MB.
+System memory in use after: 115.3 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 3442.
+Total: 3.461000 ms (FindLiveObjects: 0.367600 ms CreateObjectMapping: 0.270000 ms MarkObjects: 2.715300 ms  DeleteObjects: 0.106500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1162.191794 seconds.
+  path: Assets/Models/Rails/RailCurve0000.fbx
+  artifactKey: Guid(70801591bdcdf6841aa7ee02c2c73247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Rails/RailCurve0000.fbx using Guid(70801591bdcdf6841aa7ee02c2c73247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71c4e6887b07eb503539cc5e7124f52e') in 0.165544 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/Models/Rails/RailDiagonalStraightSlantCorrection0001.fbx
+  artifactKey: Guid(1b88bbf099b9c2c49b3eb514b73af65b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Rails/RailDiagonalStraightSlantCorrection0001.fbx using Guid(1b88bbf099b9c2c49b3eb514b73af65b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9399a9fade0115e40dfb7a9d2fc54a17') in 0.039575 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/Models/Rails/RailUpTurn0000.fbx
+  artifactKey: Guid(dec5024c5c160cf48893725c4c1ab76a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Rails/RailUpTurn0000.fbx using Guid(dec5024c5c160cf48893725c4c1ab76a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3cbd32ca87cff4e92ae5ef8afdfed61') in 0.051554 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/Models/Rails/RailDownTurn0000.fbx
+  artifactKey: Guid(93db77da1db25bb4ca0d3d9e5dce393d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Rails/RailDownTurn0000.fbx using Guid(93db77da1db25bb4ca0d3d9e5dce393d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '424b49ebed0ec718b1b446d196ef1ec2') in 0.048882 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/Models/Rails/RailStraight.fbx
+  artifactKey: Guid(ef9427f969dd00e42ae94bf691084193) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Rails/RailStraight.fbx using Guid(ef9427f969dd00e42ae94bf691084193) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '910f8a7971c1510ec437ca46656dc0e3') in 0.046197 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Models/Rails/RailDiagonalStraightCurveUp.fbx
+  artifactKey: Guid(42d1f78694ae15e4da2197e987578015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Rails/RailDiagonalStraightCurveUp.fbx using Guid(42d1f78694ae15e4da2197e987578015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f30e80d1eed15c4fc1e9f67960d20ab') in 0.028137 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Models/Rails/RailCurve0001.fbx
+  artifactKey: Guid(f3e249b5040ba8e40bd9538acc91b89b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Rails/RailCurve0001.fbx using Guid(f3e249b5040ba8e40bd9538acc91b89b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '636b5f5d4daf542f6eabec2246fc3bc2') in 0.042235 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Models/Rails/RailDiagonalStraightSlant.fbx
+  artifactKey: Guid(9f9bcd4e050ebf0469e6b539148652e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Rails/RailDiagonalStraightSlant.fbx using Guid(9f9bcd4e050ebf0469e6b539148652e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90144fa335b59e284f56a43afc91cb98') in 0.033021 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Models/Rails/RailJump.fbx
+  artifactKey: Guid(6dbb9a50336c1eb4b88237af1a3f952e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Rails/RailJump.fbx using Guid(6dbb9a50336c1eb4b88237af1a3f952e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e199bdbdc56fd88621d8718924ae979') in 0.042170 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/Models/Rails/RailDiagonalStraightCurveUp0000.fbx
+  artifactKey: Guid(cdbbe36ed288475429f54f4cba69e068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Rails/RailDiagonalStraightCurveUp0000.fbx using Guid(cdbbe36ed288475429f54f4cba69e068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15cb619b012125ce2707230733a17c16') in 0.035383 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/Models/Rails/RailDownStraight.fbx
+  artifactKey: Guid(96f3eb2637b955c44ab0ac4f8219fb83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Rails/RailDownStraight.fbx using Guid(96f3eb2637b955c44ab0ac4f8219fb83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a333664811eae155b1a559dbd698878') in 0.047733 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/Models/Rails/RailDiagonalStraightSlantCorrection0000.fbx
+  artifactKey: Guid(653426aadd273dd408731fba8c3e8cfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Rails/RailDiagonalStraightSlantCorrection0000.fbx using Guid(653426aadd273dd408731fba8c3e8cfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '957946402cf3c366ff7e57ca247b4a80') in 0.032265 seconds 
