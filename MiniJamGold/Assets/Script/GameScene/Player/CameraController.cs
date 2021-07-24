@@ -35,27 +35,47 @@ public class CameraController : MonoBehaviour
     private Queue<Vector3> mTargetPositions = new Queue<Vector3>();
     private Vector3 mTargetCameraPosition = Vector3.zero;
 
+    [SerializeField] private float mMovementSpeed = 1f;
+    [SerializeField] private float mAccuracyThreshold = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        CalculateNextTargetPosition(mTarget);
+        PopNextTargetPosition();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (mTarget != null) FocusTarget();
+
+        Vector3 directionToTarget = mTargetCameraPosition - transform.position;
+        transform.position += directionToTarget.normalized * mMovementSpeed * Time.deltaTime;
+
+        if (Vector3.Distance(transform.position, mTargetCameraPosition) < mAccuracyThreshold)
+        {
+            if (mTargetPositions.Count > 0)
+            {
+                PopNextTargetPosition();
+            }
+        }
+        
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            CalculateNextTargetPosition(mTarget);
+        }
     }
 
     void FocusTarget()
     {
-        
         transform.LookAt(mTarget.transform, Vector3.up);
     }
 
     void PopNextTargetPosition()
     {
-        //mTargetCameraPosition = mTargetPositions
+        if (mTargetPositions.Count <= 0) return;
+        mTargetCameraPosition = mTargetPositions.Dequeue();
     }
 
     public void CalculateNextTargetPosition(GameObject argTargetObject)
