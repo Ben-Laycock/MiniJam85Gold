@@ -39,3 +39,5 @@ sysinfo.txt
 *.log
 MiniJamGold/Logs/AssetImportWorker0.log
 *.log
+*.log
+MiniJamGold/Logs/AssetImportWorker0-prev.log
