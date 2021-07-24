@@ -41,3 +41,5 @@ MiniJamGold/Logs/AssetImportWorker0.log
 *.log
 *.log
 MiniJamGold/Logs/AssetImportWorker0-prev.log
+*.asset
+MiniJamGold/ProjectSettings/DynamicsManager.asset
