@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 mTargetMovement = Vector3.zero;
     private GroundInformation mCurrentGroundInformation = new GroundInformation();
 
+    [SerializeField] private GameObject mCamera = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -88,7 +90,8 @@ public class PlayerController : MonoBehaviour
 
     public Vector3 GetTargetMovementVector()
     {
-        Vector3 targetMovement = Vector3.forward * Input.GetAxisRaw("Vertical") + Vector3.right * Input.GetAxisRaw("Horizontal");
+        Vector3 targetMovement = mCamera.transform.forward * Input.GetAxisRaw("Vertical") + 
+                                 mCamera.transform.right * Input.GetAxisRaw("Horizontal");
         return targetMovement.normalized;
     }
 
