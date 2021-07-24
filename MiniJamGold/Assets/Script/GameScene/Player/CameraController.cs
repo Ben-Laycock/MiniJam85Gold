@@ -87,12 +87,34 @@ public class CameraController : MonoBehaviour
 
     Vector3 GetTargetCameraPosition(GameObject argTargetObject)
     {
-        Vector3 targetPosition = Vector3.zero;
+        Vector3 targetPosition = argTargetObject.transform.position;
 
         switch (mFocusDirection)
         {
+            case TargetFocusDirection.eFront:
+                targetPosition += argTargetObject.transform.forward * mTargetRange +
+                    argTargetObject.transform.up * mTargetYOffset;
+                break;
+
             case TargetFocusDirection.eRight:
-                targetPosition = argTargetObject.transform.position + argTargetObject.transform.right * mTargetRange + argTargetObject.transform.up * mTargetYOffset;
+                targetPosition += argTargetObject.transform.right * mTargetRange +
+                    argTargetObject.transform.up * mTargetYOffset;
+                break;
+
+            case TargetFocusDirection.eBack:
+
+                break;
+
+            case TargetFocusDirection.eLeft:
+
+                break;
+
+            case TargetFocusDirection.eUp:
+
+                break;
+
+            case TargetFocusDirection.eDown:
+
                 break;
 
             default:
