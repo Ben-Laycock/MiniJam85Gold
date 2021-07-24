@@ -50,15 +50,17 @@ public class CameraController : MonoBehaviour
     {
         if (mTarget != null) FocusTarget();
 
-        Vector3 directionToTarget = mTargetCameraPosition - transform.position;
-        transform.position += directionToTarget.normalized * mMovementSpeed * Time.deltaTime;
-
         if (Vector3.Distance(transform.position, mTargetCameraPosition) < mAccuracyThreshold)
         {
             if (mTargetPositions.Count > 0)
             {
                 PopNextTargetPosition();
             }
+        }
+        else
+        {
+            Vector3 directionToTarget = mTargetCameraPosition - transform.position;
+            transform.position += directionToTarget.normalized * mMovementSpeed * Time.deltaTime;
         }
         
         if (Input.GetKeyDown(KeyCode.N))
@@ -102,19 +104,21 @@ public class CameraController : MonoBehaviour
                 break;
 
             case TargetFocusDirection.eBack:
-
+                targetPosition += -argTargetObject.transform.forward * mTargetRange +
+                    argTargetObject.transform.up * mTargetYOffset;
                 break;
 
             case TargetFocusDirection.eLeft:
-
+                targetPosition += -argTargetObject.transform.right * mTargetRange +
+                    argTargetObject.transform.up * mTargetYOffset;
                 break;
 
             case TargetFocusDirection.eUp:
-
+                targetPosition += argTargetObject.transform.up * mTargetRange;
                 break;
 
             case TargetFocusDirection.eDown:
-
+                targetPosition += -argTargetObject.transform.up * mTargetRange;
                 break;
 
             default:

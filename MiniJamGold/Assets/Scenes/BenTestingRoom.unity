@@ -852,10 +852,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8b597b2180eb44bb2dbb05be6438b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTarget: {fileID: 887758908}
+  mTarget: {fileID: 1701851992}
   mTargetRange: 10
   mTargetYOffset: 5
-  mFocusDirection: 0
+  mFocusDirection: 2
   mMovementSpeed: 1
   mAccuracyThreshold: 1
 --- !u!1 &1594028648
