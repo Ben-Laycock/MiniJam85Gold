@@ -1,5 +1,5 @@
 
-=== Fri Jul 23 23:22:25 2021
+=== Sat Jul 24 12:38:15 2021
 
 Packages were changed.
 Update Mode: mergeDefaultDependencies
@@ -45,8 +45,3 @@ The following packages were added:
   com.unity.timeline@1.5.4
   com.unity.ugui@1.0.0
   com.unity.visualscripting@1.6.1
-The following packages were updated:
-  com.unity.2d.animation from version 5.0.1 to 6.0.1
-  com.unity.2d.pixel-perfect from version 4.0.1 to 5.0.0
-  com.unity.2d.psdimporter from version 4.0.1 to 5.0.1
-  com.unity.2d.spriteshape from version 5.0.1 to 6.0.0
