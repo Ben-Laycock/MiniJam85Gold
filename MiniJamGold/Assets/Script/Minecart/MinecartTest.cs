@@ -7,15 +7,17 @@ public class MinecartTest : MonoBehaviour
     List<Transform> trackMarkers = new List<Transform>();
     Rigidbody rb;
     int targetMarkerIndex = 1;
-    float targetDistanceTolerance = 0.1f;
-    float rotationInterpolationSpeed = 20f;
+    float targetDistanceTolerance = 0.25f;
+    float rotationInterpolationSpeed = 150f;
 
     // Velocity stuff
-    float maxVelocity = 10;
+    float maxVelocity = 20;
     float velocity = 0;
     float maxAcceleration = 0.1f;
     float acceleration = 0;
 
+    //Cart animator
+    Animator cartAnimator;
 
     void Start()
     {
@@ -27,6 +29,8 @@ public class MinecartTest : MonoBehaviour
         if (trackMarkers.Count < 2) this.enabled = false;
 
         transform.position = trackMarkers[0].position;
+
+        cartAnimator = gameObject.GetComponent<Animator>();
     }
 
 
@@ -39,23 +43,27 @@ public class MinecartTest : MonoBehaviour
         float distanceToTarget = (trackMarkers[targetMarkerIndex].position - transform.position).magnitude;
         if (distanceToTarget <= targetDistanceTolerance)
         {
-            transform.position = trackMarkers[targetMarkerIndex].position;
+            //transform.position = trackMarkers[targetMarkerIndex].position;
 
 
             if (targetMarkerIndex == 0 && (acceleration <= 0 || velocity < 0))
             { // If the player wants to travel backwards past the first target, do not let them
                 velocity = 0;
                 acceleration = 0;
-
+                rb.velocity = Vector3.zero;
+                Debug.Log("Start: " + targetMarkerIndex);
             }
             else if (targetMarkerIndex == trackMarkers.Count - 1 && (acceleration >= 0 || velocity > 0))
             { // If the player wants to trabel forwards past the last target, do not let them. 
                 velocity = 0;
                 acceleration = 0;
+                rb.velocity = Vector3.zero;
+                Debug.Log("End: " + targetMarkerIndex);
             }
             else
             { // If the user is not at a start / end target and has valid velocities then update the target
                 UpdateTarget();
+                Debug.Log("Other: " + targetMarkerIndex);
             }
 
         }
@@ -64,11 +72,13 @@ public class MinecartTest : MonoBehaviour
         if (velocity == 0) return;
 
         // Get the target direction of the cart, taking into account if the user wants to go FORWARD or BACKWARD
-        Vector3 targetDirection = Mathf.Sign(velocity) * (trackMarkers[targetMarkerIndex].position - trackMarkers[targetMarkerIndex - (int)Mathf.Sign(velocity)].position);
+        Vector3 targetDirection = Mathf.Sign(velocity) * (trackMarkers[targetMarkerIndex].position - transform.position);
         rb.velocity = targetDirection.normalized * velocity;
 
         // Update the rotation
-        transform.forward = Vector3.MoveTowards(transform.forward, targetDirection, Time.deltaTime * rotationInterpolationSpeed);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, trackMarkers[targetMarkerIndex].rotation, Time.deltaTime * rotationInterpolationSpeed);
+        //transform.forward = Vector3.MoveTowards(transform.forward, trackMarkers[targetMarkerIndex].forward, Time.deltaTime * rotationInterpolationSpeed);
+        //transform.up = Vector3.MoveTowards(transform.up, trackMarkers[targetMarkerIndex].up, Time.deltaTime * rotationInterpolationSpeed);
     }
 
     void FixedUpdate()
@@ -96,7 +106,19 @@ public class MinecartTest : MonoBehaviour
     {
         if (IsPlayerInCart())
         {
+            if (Input.GetKey(KeyCode.E))
+            {
+                cartAnimator.ResetTrigger("CartRollToggle");
+                cartAnimator.SetTrigger("CartUnstableToggle");
+                Debug.Log("E Pressed!");
+            }
+
             acceleration = maxAcceleration * Input.GetAxisRaw("Vertical");
+            if(acceleration > 0)
+            {
+                cartAnimator.ResetTrigger("CartUnstableToggle");
+                cartAnimator.SetTrigger("CartRollToggle");
+            }
         }
         else
         {
