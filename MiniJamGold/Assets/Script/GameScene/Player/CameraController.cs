@@ -53,13 +53,13 @@ public class CameraController : MonoBehaviour
     {
         if (mIdealTarget == null) return;
 
+        transform.LookAt(mIdealTarget.mTargetView.transform);
+
         if (Vector3.Distance(transform.position, mIdealTarget.mTargetPosition.transform.position) > mAccuracyThreshold)
         {
             Vector3 directionToTarget = mIdealTarget.mTargetPosition.transform.position - transform.position;
             transform.position += directionToTarget.normalized * mMovementSpeed * Time.deltaTime;
         }
-
-        transform.LookAt(mIdealTarget.mTargetView.transform);
     }
 
     public void ForceTargetChange(CameraTargetPosition argTarget)
