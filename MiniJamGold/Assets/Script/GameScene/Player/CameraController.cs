@@ -62,6 +62,13 @@ public class CameraController : MonoBehaviour
         }
     }
 
+    public void LookAtFrom(GameObject argLookTarget, GameObject argFromTarget)
+    {
+        mIdealTarget = new CameraTargetPosition();
+        mIdealTarget.mTargetView = argLookTarget;
+        mIdealTarget.mTargetPosition = argFromTarget;
+    }
+
     public void ForceTargetChange(CameraTargetPosition argTarget)
     {
         mIdealTarget = argTarget;

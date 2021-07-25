@@ -25,11 +25,13 @@ public class PlayerController : MonoBehaviour
     private GroundInformation mCurrentGroundInformation = new GroundInformation();
 
     [SerializeField] private GameObject mCamera = null;
+    [SerializeField] private GameObject mFirstCameraTargetPosition = null;
 
     // Start is called before the first frame update
     void Start()
     {
         mRigidbody = gameObject.GetComponent<Rigidbody>();
+        CameraController.Instance.LookAtFrom(gameObject, mFirstCameraTargetPosition);
     }
 
     // Update is called once per frame
@@ -135,5 +137,14 @@ public class PlayerController : MonoBehaviour
         newGroundInformation.mSurfaceAngle = bestAngle;
 
         return newGroundInformation;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Gold")
+        {
+            PlayerInfo.Instance.AddGold(5);
+            Destroy(other.gameObject);
+        }
     }
 }
