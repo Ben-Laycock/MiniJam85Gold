@@ -26,10 +26,6 @@ ExportedObj/
 *.VC.db
 *.log
 
-# Unity3D generated meta files
-*.pidb.meta
-*.pdb.meta
-
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
 
@@ -38,27 +34,15 @@ sysinfo.txt
 *.unitypackage
 *.log
 MiniJamGold/Logs/AssetImportWorker0.log
-*.log
-*.log
 MiniJamGold/Logs/AssetImportWorker0-prev.log
-*.asset
 MiniJamGold/ProjectSettings/DynamicsManager.asset
-*.log
-*.log
-*.log
-*.log
-*.log
 MiniJamGold/Logs/shadercompiler-UnityShaderCompiler.exe4.log
 MiniJamGold/Logs/shadercompiler-UnityShaderCompiler.exe3.log
 MiniJamGold/Logs/shadercompiler-UnityShaderCompiler.exe2.log
 MiniJamGold/Logs/shadercompiler-UnityShaderCompiler.exe1.log
 MiniJamGold/Logs/shadercompiler-UnityShaderCompiler.exe0.log
-*.log
 MiniJamGold/Logs/shadercompiler-AssetImportWorker0.log
-*.log
 MiniJamGold/Logs/Packages-Update.log
 MiniJamGold/Logs/AssetImportWorker0.log
-*.log
-*.log
 MiniJamGold/Logs/AssetImportWorker0-prev.log
 MiniJamGold/UserSettings/EditorUserSettings.asset

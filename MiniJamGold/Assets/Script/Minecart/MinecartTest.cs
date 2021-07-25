@@ -22,7 +22,7 @@ public class MinecartTest : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         Transform parent = transform.parent.Find("Markers");
-        foreach (Transform child in parent) trackMarkers.Add(child);
+        foreach (Transform child in parent) { trackMarkers.Add(child); child.gameObject.SetActive(false); }
 
         if (trackMarkers.Count < 2) this.enabled = false;
 
